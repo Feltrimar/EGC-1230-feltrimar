@@ -11,6 +11,7 @@ script:
 - python3 manage.py test
 services:
   - postgresql
+  - docker
 before_script:
  - cp local_settings.travis.py local_settings.py
  - psql -c "create user decide with password 'decide'" 
